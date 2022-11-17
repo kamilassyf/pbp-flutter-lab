@@ -42,4 +42,63 @@ fungsi dari setState() adalah untuk melakukan update atau rebuild terhadap user 
 
     d. mengubah warna teks menjadi merah ketika angka bernilai genap 
 
+
 2. Melakukan add-commit-push ke repositori baru di GitHub dengan nama pbp-flutter-lab
+
+
+
+# **TUGAS - 08**
+
+## Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+
+1. Navigator.push: proses push terjadi dengan menimpa rute/layer sebelumnya. 
+
+2. Navigator.pushReplacement : proses push terjadi dengan membuang rute/layer sebelumnya. 
+ 
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+DropdownButton -> membuat opsi dropdown/pilihan untuk memilih input
+
+Spacer ->  membuat jarak antar widget
+
+TextFormField -> memasukan input dari user
+
+Card -> membuat Card untuk menampilkan input
+ 
+Form -> container untuk menggabungkan beberapa input  
+
+Container -> menampung beberapa komponen
+
+Column, Padding, Row -> menyesuaikan posisi sesuai perintah 
+
+TextStyle -> membuat styling tulisan seperti warna tulisan dsb
+
+
+
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+
+- OnPressed
+
+- OnChange
+
+- OnSaved
+
+- OnTap
+
+
+
+## Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+
+Navigator bekerja seperti stack yaitu dengan konsep last in first out. Last in first out adalah memunculkan yang paling lama/atas. Ketika terjadi push pada navigator, layar yang ditampilkan adalah urutan paling atas/lama dari stack.
+
+
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+1. Menambahkan drawer/hamburger yang berisi 3 navigasi pada hamburger  di file data.dart, main.dart, form.dart
+
+2. Membuat halaman form pada form.dart dengan membuat elemen input String untuk judul, int untuk nominal, dan dropdown untuk tipe budget. Kemudian menambahkan button 'simpan' untuk menyimpan input
+
+3. Membuat halaman data pada data.dart. pada halaman ini menampilkan input yang telah dimasukan pada form.
+
+4. Melakukan add-commit-push pada github pbp-flutter-lab. 
