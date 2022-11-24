@@ -1,8 +1,9 @@
 import 'package:lab/main.dart';
-import 'package:lab/form.dart';
-import 'package:lab/data.dart';
+import 'package:lab/page/form.dart';
+import 'package:lab/page/data.dart';
 import 'package:flutter/material.dart';
-import 'package:lab/model_data.dart';
+import 'package:lab/page/model_data.dart';
+import 'package:lab/page/watch_list_page.dart';
 
 
 class MyFormPage extends StatefulWidget {
@@ -31,22 +32,18 @@ class _MyFormPageState extends State<MyFormPage> {
       jenis = null;
     });
   }
-  @override
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Form'),
+        title: const Text('My Watch List'),
       ),
-
-      // Menambahkan drawer menu
       drawer: Drawer(
         child: Column(
           children: [
-            // Menambahkan clickable menu
             ListTile(
-              title: const Text('Counter'),
+              title: const Text('counter'),
               onTap: () {
-                // Route menu ke halaman utama
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const MyHomePage()),
@@ -54,9 +51,8 @@ class _MyFormPageState extends State<MyFormPage> {
               },
             ),
             ListTile(
-              title: const Text('Form Budget'),
+              title: const Text('Tambah Budget'),
               onTap: () {
-                // Route menu ke halaman form
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const MyFormPage()),
@@ -64,15 +60,23 @@ class _MyFormPageState extends State<MyFormPage> {
               },
             ),
             ListTile(
-                title: const Text('Data Budget'),
-                onTap: () {
-                  // Route menu ke halaman form
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MyDataPage()),
-                  );
-                },
-              ),
+              title: const Text('Data Budget'),
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyDataPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('My Watch List'),
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyWatchListPage()),
+                );
+              },
+            ),
           ],
         ),
       ),

@@ -1,7 +1,8 @@
 import 'package:lab/main.dart';
 import 'package:flutter/material.dart';
-import 'package:lab/model_data.dart';
-import 'package:lab/form.dart';
+import 'package:lab/page/model_data.dart';
+import 'package:lab/page/form.dart';
+import 'package:lab/page/watch_list_page.dart';
 
 
 class MyDataPage extends StatefulWidget {
@@ -15,15 +16,15 @@ class _MyDataPageState extends State<MyDataPage> {
 
   @override
   Widget build(BuildContext context) {
-return Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: Text('Data Budget'),
+        title: const Text('My Watch List'),
       ),
       drawer: Drawer(
         child: Column(
           children: [
             ListTile(
-              title: const Text('Counter'),
+              title: const Text('counter'),
               onTap: () {
                 Navigator.pushReplacement(
                   context,
@@ -32,9 +33,8 @@ return Scaffold(
               },
             ),
             ListTile(
-              title: const Text('Form Budget'),
+              title: const Text('Tambah Budget'),
               onTap: () {
-                // Route menu ke halaman form
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const MyFormPage()),
@@ -44,10 +44,18 @@ return Scaffold(
             ListTile(
               title: const Text('Data Budget'),
               onTap: () {
-                // Route menu ke halaman form
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const MyDataPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('My Watch List'),
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyWatchListPage()),
                 );
               },
             ),

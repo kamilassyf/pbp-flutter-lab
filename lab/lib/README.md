@@ -102,3 +102,46 @@ Navigator bekerja seperti stack yaitu dengan konsep last in first out. Last in f
 3. Membuat halaman data pada data.dart. pada halaman ini menampilkan input yang telah dimasukan pada form.
 
 4. Melakukan add-commit-push pada github pbp-flutter-lab. 
+
+
+# **TUGAS - 09**
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+--> Pengambilan data JSON tanpa menggunakan model sebenarnya bisa. Namun, kita tidak bisa membuat data ditampilkan sesuai dengan keinginan kita sehingga struktur yang ditampilkan tidak dapat dicustom.
+
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+- Column, Padding, Row -> menyesuaikan posisi sesuai perintah 
+
+- listView -> menampilkan contentnya sehingga bisa utk di scrolling
+
+
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+
+1. Menambahkan dependensi HTTP ke dalam proyek 
+
+2. Membuat model sesuai json yang akan di get
+
+3. Membuat HTTP request ke web service dengan method GET
+
+4. Melakukan konversi objek menjadi model yang dibuat 
+
+5. Menampilkan data dengan widget FutureBuilder
+
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Menambahkan drawer/hamburger yang berisi 3 navigasi pada hamburger  di file data.dart, main.dart, form.dart, dan watch_list_page.dart
+
+2. Membuat folder model yang berisikan file watch_list.dart sebagai model
+
+3. Menambahkan model watch list berdasarkan tugas 3 sebelumnya dengan memanfaatkan web Quicktype
+
+4. Menambahkan package http dan import <uses-permission android:name="android.permission.INTERNET" /> pada direktori android/app/src/main/AndroidManifest.xml
+
+5. Membuat file pada page untuk menampilkan watch list (watchlistpage) dan detail watch list (watchlistdetails)
+
+6. Pada file watch_list_page.dart berisi fungsi untuk menampilkan list watch list yang dapat ditekan untuk memunculkan detail (bila ditekan akan menampilkan isi detail berdasarkan fungsi pada file watch_list_detail.dart)
+
+7. pada watch list detail menampilkan data detail film dan membuat button back yang akan kembali ke card dari watch list yang ada
